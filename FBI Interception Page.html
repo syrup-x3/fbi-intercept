@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FBI Digital Communication Interception Protocol</title>
+    <style>
+        /* CSS for the FBI-style website - Full Width Version */
+        :root {
+            --fbi-dark-blue: #0a2240;
+            --fbi-light-blue: #a8b9c9;
+            --fbi-gold: #c9a86d;
+            --fbi-grey: #f0f2f5; /* Lighter grey for background */
+            --fbi-dark-grey: #333;
+            --fbi-white: #ffffff;
+            --fbi-border-color: #d1d1d1;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            background-color: var(--fbi-grey);
+            color: var(--fbi-dark-grey);
+            line-height: 1.6;
+        }
+
+        /* Wrapper to constrain content width for readability inside full-width sections */
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* Header */
+        .site-header {
+            background-color: var(--fbi-dark-blue);
+            color: var(--fbi-white);
+            padding: 20px 0;
+            border-bottom: 5px solid var(--fbi-gold);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .seal {
+            width: 80px;
+            height: 80px;
+            margin-right: 25px;
+            flex-shrink: 0; /* Prevents the seal from shrinking */
+        }
+
+        .header-text h1 {
+            margin: 0;
+            font-size: 2.2em;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .header-text p {
+            margin: 0;
+            font-size: 1.2em;
+            color: var(--fbi-light-blue);
+        }
+
+        /* Main Content */
+        .main-content {
+            background-color: var(--fbi-white);
+            padding: 40px 0;
+            min-height: 60vh; /* Ensures it takes up significant space */
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: var(--fbi-dark-blue);
+            border-bottom: 2px solid var(--fbi-grey);
+            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            color: var(--fbi-dark-blue);
+            margin-top: 35px;
+        }
+
+        p {
+            margin-bottom: 1em;
+            font-size: 1.05em;
+        }
+
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .notice-box {
+            background-color: #e7f3fe;
+            border-left: 5px solid #2196F3;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        
+        .notice-box p {
+            margin: 0;
+            font-weight: 500;
+        }
+
+        /* FAQ Accordion */
+        details {
+            border: 1px solid var(--fbi-border-color);
+            border-radius: 4px;
+            margin-bottom: 10px;
+            background-color: #f8f8f8;
+        }
+
+        summary {
+            font-weight: bold;
+            padding: 15px;
+            cursor: pointer;
+            outline: none;
+            color: var(--fbi-dark-blue);
+            font-size: 1.1em;
+        }
+        
+        details[open] {
+             background-color: var(--fbi-white);
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid var(--fbi-border-color);
+        }
+
+        .faq-content {
+            padding: 15px 20px;
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: #212529; /* Darker footer */
+            color: #ccc;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 0.9em;
+            margin-top: 0;
+        }
+        
+        .site-footer p {
+            margin: 5px 0;
+            font-size: 1em;
+        }
+        
+        .footer-links a {
+            color: var(--fbi-white);
+            margin: 0 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .seal {
+                margin: 0 0 15px 0;
+            }
+            .header-text h1 {
+                font-size: 1.8em;
+            }
+            .content-wrapper {
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="content-wrapper header-content">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/FBISeal.png" alt="Seal of the Federal Bureau of Investigation" class="seal">
+            <div class="header-text">
+                <h1>Federal Bureau of Investigation</h1>
+                <p>U.S. Department of Justice</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="content-wrapper">
+            <h2>Information on Digital Message Interception</h2>
+            <p><strong>Case File Reference:</strong> [Redacted]</p>
+            <p><strong>Timestamp:</strong> <span id="timestamp">Loading...</span></p>
+
+            <div class="notice-box">
+                <p><strong>Official Notice:</strong> You have been directed to this page because a digital communication associated with your session was subject to interception pursuant to federal law. This page provides information regarding the legal basis and protocol for such actions.</p>
+            </div>
+
+            <h3>1. What is Digital Message Interception?</h3>
+            <p>Digital Message Interception is a lawful surveillance technique used by federal law enforcement agencies, including the FBI, to collect electronic communications. This action is undertaken as part of an authorized investigation into criminal activity or threats to national security. When a message is intercepted, its original content is captured for evidentiary purposes, and a standardized notification message is typically put in its place.</p>
+            
+            <h3>2. Legal Basis and Authorization</h3>
+            <p>The interception of electronic communications is not conducted arbitrarily. It is strictly governed by U.S. federal law, including the Electronic Communications Privacy Act (ECPA) and the Foreign Intelligence Surveillance Act (FISA). Actions are executed only after receiving explicit authorization from a federal court or, in specific circumstances, the U.S. Attorney General.</p>
+            <p>This authorization, often in the form of a warrant, is granted only upon a showing of <strong>probable cause</strong> that the target is engaged in criminal activity or is an agent of a foreign power, and that the interception will yield evidence of such activity.</p>
+
+            <h3>3. The Interception Process</h3>
+            <p>Pursuant to a lawful order, telecommunications carriers and electronic communication service providers are compelled to provide technical assistance to the government. The process involves the following stages:</p>
+            <ol>
+                <li><strong>Identification:</strong> The target communication channel (e.g., an account, device, or IP address) is identified in the court order.</li>
+                <li><strong>Collection:</strong> The content of the communication is captured in real-time or from storage by a secure, automated system.</li>
+                <li><strong>Replacement:</strong> To maintain the integrity of the communication platform and to serve as a marker for the action, the original message is replaced with the standardized notification: <em>"This message has been intercepted by the United States Federal Bureau of Investigation (FBI). Learn more."</em></li>
+                <li><strong>Review and Analysis:</strong> The collected data is handled by authorized personnel who analyze it for information relevant to the ongoing investigation. All data handling is subject to strict minimization procedures to protect privacy.</li>
+            </ol>
+            
+            <h2>Frequently Asked Questions (FAQ)</h2>
+
+            <details>
+                <summary>Was my entire conversation read by an agent?</summary>
+                <div class="faq-content">
+                    <p>Not necessarily. Intercepted data is subject to "minimization" requirements. This means the government must adopt procedures to minimize the acquisition and retention of information that is not relevant to the investigation. Automated systems may first filter data, and only potentially relevant communications are reviewed by authorized personnel.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>Is this a violation of my First or Fourth Amendment rights?</summary>
+                <div class="faq-content">
+                    <p>No. The Fourth Amendment protects against unreasonable searches and seizures. Electronic surveillance conducted under a warrant issued by a court, based on probable cause, is considered a "reasonable" search under the law. The process is designed to balance law enforcement needs with individual privacy rights, as adjudicated by the judicial branch.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>Am I under investigation?</summary>
+                <div class="faq-content">
+                    <p>This page serves as a general notice and does not confirm the investigative status of any individual. You may have sent a message to, or received a message from, a party who is the subject of a lawful investigation. The FBI cannot provide further details regarding ongoing investigations.</p>
+                </div>
+            </details>
+            
+            <details>
+                <summary>What should I do now?</summary>
+                <div class="faq-content">
+                    <p>No immediate action is required from you upon seeing the interception message. If law enforcement requires your cooperation or further information, you will be contacted through official channels. If you have been charged with a crime, you have the right to seek legal counsel.</p>
+                </div>
+            </details>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="content-wrapper">
+            <p>&copy; 2024 United States Department of Justice. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">About the FBI</a> |
+                <a href="#">Contact Us</a> |
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript to add a dynamic timestamp
+        document.addEventListener('DOMContentLoaded', function() {
+            const timestampElement = document.getElementById('timestamp');
+            if (timestampElement) {
+                const now = new Date();
+                const options = { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric', 
+                    hour: '2-digit', 
+                    minute: '2-digit', 
+                    second: '2-digit',
+                    timeZoneName: 'short' 
+                };
+                timestampElement.textContent = now.toLocaleString('en-US', options);
+            }
+        });
+    </script>
+
+</body>
+</html>
